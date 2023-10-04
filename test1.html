@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <title>My test page</title>
+    <style>
+        body{
+            /*display: flex box allows body to be a flexbox container
+            flex-direction: columns allows body to stretch into a column
+            width - the width of the individual flexbox elements inside the container body
+            height - height of the container
+            border and border- radius shows the field created in the flex box container
+            background image- url(image path)
+            background repeat - norepeat will not repeat the same image along the width and height of the browser page
+            background-size: cover - will enlarge the image to cover the height of the body container*/
+            display: flexbox;
+            flex-direction: columns;
+            width: 30 px;
+            height: 100vh;
+            border: dotted thin black;
+            border-radius: 3mm;
+            background-image: url(https://th.bing.com/th/id/OIP.emNsdlwbju_blBcRv6bHrwHaE2?pid=ImgDet&rs=1);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        body > *{ /*child combinator with immediate children elements in the parent body element*/
+            /*using the margin settings in the child combinator is much easier.
+            make sure to keep units like rem, px, vx next to the value given,*/
+            background-color: orange;
+            margin-bottom: 1rem;  
+            margin-top: 1rem;  
+            margin-right: 1rem;
+            margin-left: 1rem;
+            border:1px solid black;
+        }
+        main > *{/* all elements inside main element will have a white background
+            with a black solid 1 px border line surrounding the flex boxs and a uniform
+            1rem margin all-around.*/
+            background-color: white;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+            border:1px solid black;
+        }
+        div > *{/* all elements inside div element will have a white background
+            with a black solid 1 px border line surrounding the flex boxs and a uniform
+            1rem margin all-around.*/
+            background-color: white;
+            border: 1px solid black;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-right:1rem;
+        }
+        header{/*height of the header container is 5rem, text fontstyle
+            san-serif, and text aligned in the center*/
+            height: 5rem; 
+            text-emphasis: sans-serif 12px;
+            text-align: center;
+        }
+        nav{/*background-color of nav element container  is orange
+            and height of container is 4rem.*/
+            background-color: orange;
+            height:4rem;
+        }
+        nav ul{/*make a flex container, provide space around, 
+            align-items: center will align text vertically, margins 1rem,
+            square list point, and white background container for li elements.*/
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin:1rem 1rem 1rem 1rem;
+            list-style-type: square;
+            border: 1px solid black;
+            background-color: white;
+        }
+        ul li{/*adjust space btw each flexbox*/
+            justify-content: space-around;
+        }
+        main{
+            flex-grow: 1;/*standard relative growth to any elements inside*/
+            display: flex;/*flex box container initialization*/
+            flex-direction: row;/*flex container direction row*/
+            flex-wrap: nowrap;/*do not wrap flex boxes*/
+            justify-content:space-between;/* space interval inbetween flexboxes*/
+            height: 51vh; /*height of main container*/
+        }
+        article{/*overflow-y:scroll create a scroll type flexbox.
+            flex-grow:1 distributes size relative to other elements in same container.*/
+            flex-grow:1;
+            height: 5vh;
+            overflow-y:scroll;
+        }
+        aside{/*flexbox features*/
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 10rem;    
+        }
+        footer{ 
+            height:2.5rem;/*height of footer container*/ 
+        }
+        section{
+            flex-grow: 1;
+            border: 1px solid black;
+        }
+        div{/*flex container row direction, evenly spaced flex boxes*/
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        #first{/*height of element assigned to id*/
+           height:45vh; 
+        }
+        
+    </style>
+    </head>
+    <body>
+    
+        <header>
+            <h1>Title</h1>
+        </header>
+        <div>div
+            <section >Section<br></section>
+        </div>
+        <nav>
+            Navigation<br>
+            <ul>
+                <li><a href ="#">Home</a></li>
+                <li><a href ="#">Our Products</a></li>
+                <li><a href ="#">Our History</a></li>
+                <li><a href ="#">Jobs and Careers</a></li>
+                <li><a href ="#">Contacts</a></li>
+            </ul>
+        </nav>
+        <main>
+            main
+            <article id = "first">article</article>
+            <article>
+                Article<br>l;askdf;oaskd<br>;akljsdfnng<br>
+                aslkdf<br>laksdjf<br>
+            </article>
+            <aside>
+                Aside
+            </aside>
+        
+        </main>
+            <div>div<br>
+                <section>Section</section>
+            </div>
+        <footer>
+            Footer
+        </footer>
+    </body>
+</html>
